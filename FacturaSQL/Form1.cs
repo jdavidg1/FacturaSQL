@@ -21,5 +21,12 @@ namespace FacturaSQL
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            rbtnRegistrar.Checked = true;
+            Conexion c = new Conexion();
+
+        }
     }
 }

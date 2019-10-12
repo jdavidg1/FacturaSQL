@@ -32,17 +32,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtFechaNacimiento = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rbtnModificar = new System.Windows.Forms.RadioButton();
+            this.rbtnEliminar = new System.Windows.Forms.RadioButton();
+            this.rbtnRegistrar = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,33 +83,33 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Fecha de nacimiento";
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(167, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtId.Location = new System.Drawing.Point(200, 151);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(199, 20);
+            this.txtId.TabIndex = 4;
             // 
-            // textBox2
+            // txtFechaNacimiento
             // 
-            this.textBox2.Location = new System.Drawing.Point(167, 251);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtFechaNacimiento.Location = new System.Drawing.Point(200, 251);
+            this.txtFechaNacimiento.Name = "txtFechaNacimiento";
+            this.txtFechaNacimiento.Size = new System.Drawing.Size(199, 20);
+            this.txtFechaNacimiento.TabIndex = 5;
             // 
-            // textBox3
+            // txtApellidos
             // 
-            this.textBox3.Location = new System.Drawing.Point(167, 218);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtApellidos.Location = new System.Drawing.Point(200, 218);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(199, 20);
+            this.txtApellidos.TabIndex = 6;
             // 
-            // textBox4
+            // txtNombre
             // 
-            this.textBox4.Location = new System.Drawing.Point(167, 187);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(199, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtNombre.Location = new System.Drawing.Point(200, 187);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(199, 20);
+            this.txtNombre.TabIndex = 7;
             // 
             // btnAgregar
             // 
@@ -140,9 +140,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbtnModificar);
+            this.groupBox1.Controls.Add(this.rbtnEliminar);
+            this.groupBox1.Controls.Add(this.rbtnRegistrar);
             this.groupBox1.Location = new System.Drawing.Point(65, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(416, 67);
@@ -150,38 +150,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimiento C# - SQL Server";
             // 
-            // radioButton1
+            // rbtnModificar
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(27, 33);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtnModificar.AutoSize = true;
+            this.rbtnModificar.Location = new System.Drawing.Point(288, 33);
+            this.rbtnModificar.Name = "rbtnModificar";
+            this.rbtnModificar.Size = new System.Drawing.Size(68, 17);
+            this.rbtnModificar.TabIndex = 2;
+            this.rbtnModificar.TabStop = true;
+            this.rbtnModificar.Text = "Modificar";
+            this.rbtnModificar.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtnEliminar
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(159, 33);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtnEliminar.AutoSize = true;
+            this.rbtnEliminar.Location = new System.Drawing.Point(159, 33);
+            this.rbtnEliminar.Name = "rbtnEliminar";
+            this.rbtnEliminar.Size = new System.Drawing.Size(61, 17);
+            this.rbtnEliminar.TabIndex = 1;
+            this.rbtnEliminar.TabStop = true;
+            this.rbtnEliminar.Text = "Eliminar";
+            this.rbtnEliminar.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbtnRegistrar
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(288, 33);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbtnRegistrar.AutoSize = true;
+            this.rbtnRegistrar.Location = new System.Drawing.Point(27, 33);
+            this.rbtnRegistrar.Name = "rbtnRegistrar";
+            this.rbtnRegistrar.Size = new System.Drawing.Size(67, 17);
+            this.rbtnRegistrar.TabIndex = 0;
+            this.rbtnRegistrar.TabStop = true;
+            this.rbtnRegistrar.Text = "Registrar";
+            this.rbtnRegistrar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -192,16 +192,17 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtApellidos);
+            this.Controls.Add(this.txtFechaNacimiento);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -215,17 +216,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtFechaNacimiento;
+        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbtnModificar;
+        private System.Windows.Forms.RadioButton rbtnEliminar;
+        private System.Windows.Forms.RadioButton rbtnRegistrar;
     }
 }
 
