@@ -43,6 +43,7 @@
             this.rbtnModificar = new System.Windows.Forms.RadioButton();
             this.rbtnEliminar = new System.Windows.Forms.RadioButton();
             this.rbtnRegistrar = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,6 +120,7 @@
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -183,11 +185,19 @@
             this.rbtnRegistrar.Text = "Registrar";
             this.rbtnRegistrar.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(399, 251);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(46, 20);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(583, 307);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
@@ -227,6 +237,7 @@
         private System.Windows.Forms.RadioButton rbtnModificar;
         private System.Windows.Forms.RadioButton rbtnEliminar;
         private System.Windows.Forms.RadioButton rbtnRegistrar;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 
