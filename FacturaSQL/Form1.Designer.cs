@@ -37,20 +37,19 @@
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtnModificar = new System.Windows.Forms.RadioButton();
             this.rbtnEliminar = new System.Windows.Forms.RadioButton();
             this.rbtnRegistrar = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 154);
+            this.label1.Location = new System.Drawing.Point(36, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 0;
@@ -60,7 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 218);
+            this.label2.Location = new System.Drawing.Point(36, 208);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 1;
@@ -69,7 +68,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 187);
+            this.label3.Location = new System.Drawing.Point(36, 177);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 2;
@@ -78,7 +77,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 251);
+            this.label4.Location = new System.Drawing.Point(36, 241);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 13);
             this.label4.TabIndex = 3;
@@ -86,66 +85,48 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(200, 151);
+            this.txtId.Location = new System.Drawing.Point(165, 141);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(199, 20);
-            this.txtId.TabIndex = 4;
+            this.txtId.TabIndex = 0;
             // 
             // txtFechaNacimiento
             // 
-            this.txtFechaNacimiento.Location = new System.Drawing.Point(200, 251);
+            this.txtFechaNacimiento.Location = new System.Drawing.Point(165, 241);
             this.txtFechaNacimiento.Name = "txtFechaNacimiento";
             this.txtFechaNacimiento.Size = new System.Drawing.Size(199, 20);
-            this.txtFechaNacimiento.TabIndex = 5;
+            this.txtFechaNacimiento.TabIndex = 3;
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(200, 218);
+            this.txtApellidos.Location = new System.Drawing.Point(165, 208);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(199, 20);
-            this.txtApellidos.TabIndex = 6;
+            this.txtApellidos.TabIndex = 2;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(200, 187);
+            this.txtNombre.Location = new System.Drawing.Point(165, 177);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(199, 20);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(471, 160);
+            this.btnAgregar.Location = new System.Drawing.Point(507, 139);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 8;
+            this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(471, 200);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 9;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(471, 241);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 10;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbtnModificar);
             this.groupBox1.Controls.Add(this.rbtnEliminar);
             this.groupBox1.Controls.Add(this.rbtnRegistrar);
-            this.groupBox1.Location = new System.Drawing.Point(65, 43);
+            this.groupBox1.Location = new System.Drawing.Point(30, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(416, 67);
             this.groupBox1.TabIndex = 11;
@@ -185,22 +166,35 @@
             this.rbtnRegistrar.Text = "Registrar";
             this.rbtnRegistrar.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dtpFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(399, 251);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(46, 20);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dtpFecha.CustomFormat = "yyyy/MM/dd";
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(359, 241);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(96, 20);
+            this.dtpFecha.TabIndex = 15;
+            this.dtpFecha.Value = new System.DateTime(2019, 10, 13, 0, 0, 0, 0);
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(507, 174);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 16;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 307);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnModificar);
+            this.ClientSize = new System.Drawing.Size(604, 307);
             this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtApellidos);
@@ -231,13 +225,12 @@
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbtnModificar;
         private System.Windows.Forms.RadioButton rbtnEliminar;
         private System.Windows.Forms.RadioButton rbtnRegistrar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
 

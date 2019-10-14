@@ -28,7 +28,7 @@ namespace FacturaSQL
         {
             rbtnRegistrar.Checked = true;
             //Se crea una instancia y se llama al constructor
-            Conexion c = new Conexion();
+        //    Conexion c = new Conexion();
 
         }
 
@@ -36,10 +36,34 @@ namespace FacturaSQL
         {
 
             {
-                                     
+                rbtnRegistrar.Checked = true;
                 MessageBox.Show(c.insertar(Convert.ToInt32(txtId.Text), txtNombre.Text, txtApellidos.Text, txtFechaNacimiento.Text)); //datetimepicker, pendiente data greep view
 
+                //Poner los campos en blanco
+
+                txtId.Text = "";
+                txtNombre.Text = "";
+                txtApellidos.Text = "";
+                txtFechaNacimiento.Text = "";
+
             }
+
+        }
+
+       
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fecha = dtpFecha.Value;
+            txtFechaNacimiento.Text = fecha.ToString("dd/MM/yyyy");
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            rbtnEliminar.Checked = true;
+            MessageBox.Show(c.eliminar(Convert.ToInt32(txtId.Text))); //datetimepicker, pendiente data greep view
+
 
         }
     }

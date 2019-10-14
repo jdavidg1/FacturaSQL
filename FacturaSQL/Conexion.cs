@@ -95,6 +95,24 @@ namespace FacturaSQL
 
         // TERMINA EN 18:39
 
+        public string eliminar(int id)
+        {
+            string salida = "Ha sido borrado";
+            try
+            {
+                cmd = new SqlCommand("Delete from Persona where Id=" + id + "", cn);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                salida = "No se pudo borrar:" + ex.ToString();
+            }
+            return salida;
+        }
+
+
+
 
 
     }
