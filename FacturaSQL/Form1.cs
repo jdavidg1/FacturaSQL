@@ -34,18 +34,22 @@ namespace FacturaSQL
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if(c.personaRegistrada(Convert.ToInt32(txtId.Text))==0)
+            {                  
+                 
+                    MessageBox.Show(c.insertar(Convert.ToInt32(txtId.Text), txtNombre.Text, txtApellidos.Text, txtFechaNacimiento.Text)); //datetimepicker, pendiente data greep view
 
+                    //Poner los campos en blanco
+                    
+                    txtId.Text = "";
+                    txtNombre.Text = "";
+                    txtApellidos.Text = "";
+                    txtFechaNacimiento.Text = "";
+                
+            }
+            else
             {
-                rbtnRegistrar.Checked = true;
-                MessageBox.Show(c.insertar(Convert.ToInt32(txtId.Text), txtNombre.Text, txtApellidos.Text, txtFechaNacimiento.Text)); //datetimepicker, pendiente data greep view
-
-                //Poner los campos en blanco
-
-                txtId.Text = "";
-                txtNombre.Text = "";
-                txtApellidos.Text = "";
-                txtFechaNacimiento.Text = "";
-
+                MessageBox.Show("Imposible de registrar. El registro ya existe");
             }
 
         }

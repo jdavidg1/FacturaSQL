@@ -67,8 +67,8 @@ namespace FacturaSQL
         }
 
 
-        //Minuto 13:11 validar que lo que se va a insertar no esté en la base de datos
-        /*
+        //Validar que lo que se va a insertar no esté en la base de datos; 13:11
+        
         public int personaRegistrada (int id)
         {
             int contador = 0;
@@ -77,21 +77,25 @@ namespace FacturaSQL
             {
                 //comando SQL
 
-                cmd = new SqlCommand("Select " from Persona WHERE ID FALTA, cn);
+                cmd = new SqlCommand("Select * from Persona WHERE Id = "+id+"", cn);
 
-               
+                dr = cmd.ExecuteReader();
+
+                while(dr.Read())            //Incrementar el datareader
+                {
+                    contador++;                    
+                }
+                dr.Close();
 
             }
             catch (Exception ex)
             {
-                salida = "No se conectó " + ex.Message;
-
+                MessageBox.Show("No se pudo consultar bien: " + ex.Message);
             }
+            
+            return contador;
 
-
-            return salida;
-
-        }*/
+        }
 
         // TERMINA EN 18:39
 
